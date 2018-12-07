@@ -25,11 +25,11 @@
           |- node_modules/
           |- package.json
           
-        How it's works:
+        How it works:
             1 - open the terminal in the content folder $ cd this/folder
             2 -  $ npm install
             3 -  $ gulp
-            4 -  when you're ready to deploy call $ gulp cache:clear
+            4 -  when you are ready to deploy call $ gulp cache:clear
             5 -  call $ gulp build 
 
     */

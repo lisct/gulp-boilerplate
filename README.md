@@ -23,7 +23,7 @@ Structure of the webapp folder:
     |- package.json
     
 
-## How it's works
+## How it works
 
 ```bash
 
