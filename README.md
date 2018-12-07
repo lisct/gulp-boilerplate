@@ -44,7 +44,7 @@ http://localhost:3000
 Run Build (Compile Public folder)
 
 ```bash
-when you're ready to deploy call $ gulp cache:clear gulp build 
+when you are ready to deploy call $ gulp cache:clear gulp build 
 ```
 
 ##  Dependencies
