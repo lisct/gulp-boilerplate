@@ -1,0 +1,106 @@
+//=================================================================
+// Plaecholders
+//=================================================================
+
+// Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Nav Items
+
+%nav-item-disp {
+    display: inline-block;
+    margin: 0 em(12px);
+  }
+  %nav-item-link {
+    font-size: em(18px);
+    font-weight: $font-weight--thin;
+    display: block;
+    padding: em(8px, 18px);
+    border-bottom: 1px solid transparent;
+  }
+  %nav-item-on {
+    color: palette(black);
+    border-color: $color-primary;
+  }
+  
+ // center aligment
+ 
+ %center-align{
+   text-align: center;
+ }
+ 
+// For pseudo-elements
+
+%pseudos {
+  content: ''; 
+  display: block;
+  position: absolute;
+}
+
+%pseudos-center{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+// Center elements
+
+.centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+  // Headlines
+  
+  %hdln-prim {
+    color: palette(grey, x-dark);
+    font-weight: $font-weight--thin;
+    font-size: em(42px);
+    line-height: (46px/42px);
+    margin-top: 0;
+  }
+  
+  %hdln-sec {
+    color: palette(grey, light);
+    letter-spacing: $letter--space;
+    font-weight: $font-weight--thin;
+    font-size: em(24px);
+    font-family: $font-family--primary;
+  }
+  
+  // Buttons
+  
+  %btn {
+    padding: 15px 30px;
+    border: 0;
+    border-radius : $br--default;
+    color: $white;
+    text-transform: uppercase;
+    font-size : em(14px);
+    font-weight: $font-weight--regular;
+    transition: opacity $trns-duration;
+    display: block;
+    &:hover {
+      opacity: .75;
+    }
+    &:active {
+      opacity: initial;
+    }
+  }
+  
+  // Icons
+  
+  %icn--ui {
+      line-height: 0;
+      cursor: pointer;
+  }

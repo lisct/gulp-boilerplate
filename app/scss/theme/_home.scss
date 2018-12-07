@@ -1,0 +1,15 @@
+//=================================================================
+// Main Style
+//=================================================================
+
+.lh-hero-section{
+    height: 768px;
+    background-color: palette(grey, xx-light);
+    position: relative;
+    //@include img-replace("bg-hero.jpg");
+
+    @include p-el(after, 50px, 50px){
+        background-color: palette(main-primary, dark);
+        @extend %pseudos-center;
+    }
+}

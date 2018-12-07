@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="boilerplateGulp">
+    <meta name="author" content="LisbelCruz">
+
+    <!-- Favicon icon
+        <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+        -->
+    <!-- Title -->
+    <title>Boilerplate Gulp</title>
+
+    <!-- Main Styles -->
+
+    <!-- build/endbuild is instruction to minify the file and create it via gulpfile.js in a dist folder -->
+
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!--endbuild-->
+
+</head>
+
+<body>
+
+    <!-- ************************************
+        Initial Section
+        ************************************* -->
+    <div class="lh-hero-section">
+
+        <div class="grid">
+            <div class="grid__col--12">
+                <ul class="nav">
+                    <li class="nav__item"><a href="#">item 1</a></li>
+                    <li class="nav__item"><a href="#">item 2</a></li>
+                    <li class="nav__item"><a href="#">item 3</a></li>
+                    <li class="nav__item"><a href="#">item 4</a></li>
+                    <li class="nav__item"><a href="#">item 5</a></li>
+                    <li class="nav__item--current"><a href="#">item 6</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="centered grid__col--8 panel--padded--centered">
+                <h1 class="headline-primary--grouped">Lorem</h1>
+                <h2 class="headline-secondary--grouped">Ipsum</h2>
+                <p>loremAliquip aute nulla sunt culpa et mollit nisi excepteur. Aliquip proident laborum tempor magna
+                    ad veniam elit veniam commodo proident fugiat qui nisi fugiat. Anim labore officia magna aliquip
+                    dolore in ad duis magna ullamco.</p>
+                <blockquote>You know what really gets me going? A really nice set of block quotes. That's right, block
+                    quotes that say, "Hey, I'm an article you want to read and nurture."</blockquote>
+            </div>
+        </div>
+
+        <div>
+            <form class="form" action="#">
+
+                <label class="form__label" for="name">Name</label>
+                <input class="form__input" type="text" id="name" placeholder="name">
+
+                <label class="form__label" for="Email">Email</label>
+                <input class="form__input" type="text" placeholder="email@website.com">
+
+                <label class="form__label" for="msj">Message</label>
+                <textarea class="form__input form__input" id="msj" cols="30" rows="6" placeholder="Message..."></textarea>
+
+                <input class="btn--default" type="submit" value="Submit">
+
+            </form>
+        </div>
+    </div>
+
+
+
+    <!--Main JS -->
+
+    <!-- build/endbuild is instruction to minify the file and create it via gulpfile.js in a dist folder -->
+
+    <!--build:js js/main.min.js -->
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>

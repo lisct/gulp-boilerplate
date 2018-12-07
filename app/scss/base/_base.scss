@@ -1,0 +1,66 @@
+//=================================================================
+// Base Style
+//=================================================================
+
+*{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body{
+    font-size: $base__font-size;
+    line-height: ($base__line/$base__font-size);
+    font-family: $font-family--primary;
+    color: $abbey;    
+}
+
+p{
+    font-size: em(18px);
+    line-height: (27px / 18px);
+    letter-spacing: 0.01em;
+    margin:  0 0 em(30px, 18px);
+    font-weight: $font-weight--regular;
+}
+
+blockquote{
+    font-size: em(21px);
+    font-style: italic;
+    font-weight: $font-weight--thin;
+    margin: em(32px, 24px) 0;
+    padding: 0 0 0 5%;
+    border-left: solid em(8px, 24px) palette(grey, xx-light);
+}
+
+h1{
+    @extend %hdln-prim;
+}
+
+h2{
+    @extend %hdln-sec;
+}
+
+strong{
+    font-weight: $font-weight--bold;
+       
+    a{
+        color: $abbey;
+    }
+    
+    &:hover{
+        color: palette(black, light);
+    }
+}
+
+a{ 
+    text-decoration: none; 
+
+}
+
+// Images
+
+img{
+    margin-bottom: em(24px);
+    max-width: 100%;
+    height: auto;
+}

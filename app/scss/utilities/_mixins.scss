@@ -1,0 +1,108 @@
+//=================================================================
+// Mixins
+//=================================================================
+
+//for theme that need a bg 
+@mixin bg-colors($map){
+    
+    @each $theme, $color in $map{
+        &--#{$theme} {
+            background-color: $color;
+        }
+    }  
+    
+}
+
+//for background images
+@mixin img-replace($img, $w: null, $h: null, $disp: null){
+    
+    background-image: url('#{$path--rel}/#{$img}');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: $w;
+    height: $h;
+    display: $disp;
+    
+}
+
+// pseudo elements
+@mixin p-el($el, $el-w: null, $el-h: null){
+    
+    @if $el == "before" or $el == "after"{
+
+        &:#{$el} {
+            @extend %pseudos;
+            width: $el-w;
+            height: $el-h;
+            @content;
+        }
+
+    }
+    @else {
+        @error "#{$el} is not a valid presudo-elements";
+    }
+
+}
+
+// BEN selectors
+
+@mixin e($element){
+    &__#{$element}{
+        @content;
+    }
+}
+
+@mixin m($modifier){
+    &--#{$modifier}{
+        @content;
+    }
+}
+
+// Media Queries
+
+@mixin mq($break) {
+    @if $break == "small" {
+      @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+        @content;
+      }
+    }
+    @else if $break == "medium" {
+      @media (min-width: $brkpoint-md + 1) {
+        @content;
+      }
+    }
+    @else if $break == "large" {
+      @media (min-width: $brkpoint-lg) {
+        @content;
+      }
+    }
+     @else {
+         @error "Whoops! No value could be retrieved for `#{$break}`. ";
+    }
+  }
+  
+
+// Adjacent sibling margins
+
+@mixin doubly($margin: 1em){
+    & + & {
+        margin-left: $margin;
+        @content;
+    }
+}
+
+// Grid Columns
+
+@mixin g-columns {
+    @for $i from 1 through $g-col-count {
+      $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;  
+      $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+      
+      // Generate column modifier classes
+      &--#{$i} {
+        width: percentage($target / $context);
+      }
+    }
+  }

@@ -1,0 +1,108 @@
+//=================================================================
+// Global Config
+//=================================================================
+
+//Fonts Stacks
+
+$font-url--google      : 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700';
+
+$font-family--primary  : 'Source Sans Pro', sans-serif;
+
+//font Weights
+
+$font-weight--thin     : 300;
+$font-weight--regular  : 400;
+$font-weight--medium   : 600;
+$font-weight--bold     : 700;
+
+// Descriptive Base Colors
+
+$white          : #fff;
+
+$abbey          : #474749;
+$jumbo          : #8B8B8D;
+$athens-gray    : #F8F8F9;
+
+$emerald        : #5ece7f;
+$sunglo         : #e67478;
+$coral          : #ff784f;
+$purple-majesty : #9279c3;
+$scooter        : #39add1;
+
+// Color Usage
+
+$color-primary   : $abbey;
+$color-secondary : $athens-gray;
+$color-hover     : $jumbo;
+
+// Color Palette Modifiers the function in (utilities)
+
+$palettes: (
+    grey: (
+        xx-light : lighten($jumbo, 43%),
+        x-light  : lighten($jumbo, 35%),
+        light    : lighten($jumbo, 12%),
+        base     : $jumbo,
+        dark     : darken($jumbo, 8%),
+        x-dark   : darken($jumbo, 16%)
+    ),
+    
+    black:(
+        light : lighten($abbey, 20%),
+        base  : $abbey,
+        dark  : darken($abbey, 10%)
+    ),
+
+    main-primary: (
+        light   : lighten($color-primary, 43%),
+        x-light : lighten($color-primary, 35%),
+        dark    : darken($color-primary, 16%) 
+    ),
+
+    main-secondary: (
+        light   : lighten($color-secondary, 43%),
+        x-light : lighten($color-secondary, 35%),
+        dark    : darken($color-secondary, 16%) 
+    )
+);
+
+// UI Colors
+
+$ui-colors: (
+    default   : $abbey,
+    success   : $emerald,
+    error     : $sunglo,
+    warning   : $coral,
+    info      : $scooter
+);
+
+//Text
+
+$base__font-size  : 16px;
+$base__line       : 24px;
+$letter--space    : 1px;
+
+// Border radius
+
+$br--default    : .4em;
+$br--round      : 50%;
+
+// Transition
+
+$trns-duration  : .3s;
+
+// Path to Assets
+
+$path--rel    : "../images";
+
+// Grid
+
+$g-col-width    :   65px;
+$g-gutter-width :   20px;
+$g-col-count    :   12;
+$g-cont-max-w   :   1050px;
+
+// Breakpoints
+$brkpoint-sm    :   1px;
+$brkpoint-md    :   768px;
+$brkpoint-lg    :   1100px;
